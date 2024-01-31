@@ -1,0 +1,15 @@
+[Unit]
+Description=Printshop Web Service
+After=network.target
+
+[Service]
+Type=simple
+User=tan
+ExecStart=/bin/bash -c '/var/www/printshop/web/local/startServer.sh'
+Restart=on-failure
+KillSignal=SIGINT
+RestartKillSignal=SIGINT
+SyslogIdentifier=printshop_webService
+
+[Install]
+WantedBy=multi-user.target

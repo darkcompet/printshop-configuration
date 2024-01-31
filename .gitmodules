@@ -1,0 +1,3 @@
+[submodule "tool/compet/shell-ubuntu"]
+	path = tool/compet/shell-ubuntu
+	url = https://github.com/darkcompet/shell-ubuntu.git
