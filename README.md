@@ -34,4 +34,4 @@ For configuring a server by executing bash.
 ## Info
 
 Current ports:
-- web: 7001
+- web: 7011
