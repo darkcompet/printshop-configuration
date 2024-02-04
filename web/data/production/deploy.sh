@@ -9,6 +9,12 @@ prev_package_lock=$(cat package-lock.json)
 cur_package_json=$(cat package.json)
 cur_package_lock=$(cat package-lock.json)
 
+# Use node v20 for this project
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm use 20
+
 # Rebuild if package is newer
 if [[ "$prev_package_json" != "$cur_package_json" || "$prev_package_lock" != "$cur_package_lock" ]]; then
 	echo "[Notice] Some module was changed -> Run: npm install"
