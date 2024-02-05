@@ -1,6 +1,7 @@
 # Reset package-lock before pull
 cd /var/www/printshop/web
 git checkout -- package-lock.json
+git checkout -- yarn.lock
 
 # Pull
 prev_package_json=$(cat package.json)
